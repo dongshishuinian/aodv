@@ -168,7 +168,7 @@ void NS_CLASS local_repair_timeout(void *arg)
 	if (rt->nprec) {
 
 		rerr = rerr_create(0, rt->dest_addr, rt->dest_seqno);
-
+		DEBUG(LOG_DEBUG, 0, "from timeout.c_171")
 		if (rt->nprec == 1) {
 			rerr_dest = FIRST_PREC(rt->precursors)->neighbor;
 

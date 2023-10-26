@@ -275,7 +275,7 @@ static void nl_kaodv_callback(int sock)
 			RERR *rerr;
 
 			DEBUG(LOG_DEBUG, 0,
-			      "Sending RERR for unsolicited message from %s to dest %s",
+			      "from nl.c_278 Sending RERR for unsolicited message from %s to dest %s",
 			      ip_to_str(src_addr), ip_to_str(dest_addr));
 
 			if (fwd_rt) {

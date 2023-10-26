@@ -16,7 +16,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Authors: Erik Nordström, <erik.nordstrom@it.uu.se>
+ * Authors: Erik Nordstrï¿½m, <erik.nordstrom@it.uu.se>
  *
  *****************************************************************************/
 
@@ -98,7 +98,7 @@ void NS_CLASS neighbor_link_break(rt_table_t * rt)
     /* Create a route error msg, unless the route is to be repaired */
     if (rt->nprec && !(rt->flags & RT_REPAIR)) {
 	rerr = rerr_create(0, rt->dest_addr, rt->dest_seqno);
-	DEBUG(LOG_DEBUG, 0, "Added %s as unreachable, seqno=%lu",
+	DEBUG(LOG_DEBUG, 0, "from neighbor_link_break: Added %s as unreachable, seqno=%lu",
 	      ip_to_str(rt->dest_addr), rt->dest_seqno);
 
 	if (rt->nprec == 1)
@@ -149,7 +149,7 @@ void NS_CLASS neighbor_link_break(rt_table_t * rt)
 				FIRST_PREC(rt_u->precursors)->neighbor;
 
 			DEBUG(LOG_DEBUG, 0,
-			      "Added %s as unreachable, seqno=%lu",
+			      "from neighbor_link_break:: Added %s as unreachable, seqno=%lu",
 			      ip_to_str(rt_u->dest_addr), rt_u->dest_seqno);
 		    } else {
 			/* Decide whether new precursors make this a non unicast

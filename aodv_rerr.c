@@ -16,7 +16,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Authors: Erik Nordström, <erik.nordstrom@it.uu.se>
+ * Authors: Erik Nordstrï¿½m, <erik.nordstrom@it.uu.se>
  *          
  *
  *****************************************************************************/
@@ -139,10 +139,9 @@ void NS_CLASS rerr_process(RERR * rerr, int rerrlen, struct in_addr ip_src,
 
 		    if (rerr->n)
 			flags |= RERR_NODELETE;
-
 		    new_rerr = rerr_create(flags, rt->dest_addr,
 					   rt->dest_seqno);
-		    DEBUG(LOG_DEBUG, 0, "Added %s as unreachable, seqno=%lu",
+		    DEBUG(LOG_DEBUG, 0, "from rrer_process: Added %s as unreachable, seqno=%lu",
 			  ip_to_str(rt->dest_addr), rt->dest_seqno);
 
 		    if (rt->nprec == 1)

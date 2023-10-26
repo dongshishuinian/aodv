@@ -392,7 +392,7 @@ void NS_CLASS rrep_process(RREP * rrep, int rreplen, struct in_addr ip_src,
 		rerr_flags |= RERR_NODELETE;
 		rerr = rerr_create(rerr_flags, fwd_rt->dest_addr,
 				   fwd_rt->dest_seqno);
-
+		DEBUG(LOG_DEBUG, 0, "from rrep.c_396")
 		if (fwd_rt->nprec)
 		    aodv_socket_send((AODV_msg *) rerr, dest,
 				     RERR_CALC_SIZE(rerr), 1,
