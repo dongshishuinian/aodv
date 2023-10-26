@@ -1,0 +1,1 @@
+cmd_/home/cyx/m_aodv/aodv/lnx/kaodv.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/cyx/m_aodv/aodv/lnx/kaodv.ko /home/cyx/m_aodv/aodv/lnx/kaodv.o /home/cyx/m_aodv/aodv/lnx/kaodv.mod.o ;  true
