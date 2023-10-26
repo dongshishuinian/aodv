@@ -217,9 +217,10 @@ void NS_CLASS route_expire_timeout(void *arg)
 	DEBUG(LOG_DEBUG, 0, "Route %s DOWN, seqno=%d",
 	      ip_to_str(rt->dest_addr), rt->dest_seqno);
 
-	if (rt->hcnt == 1)
+	if (rt->hcnt == 1){
 		DEBUG(LOG_DEBUG, 0, "time out邻居节点断");
 		neighbor_link_break(rt);
+	}
 	else {
 		rt_table_invalidate(rt);
 		precursor_list_destroy(rt);
