@@ -16,7 +16,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Authors: Erik Nordstr�m, <erik.nordstrom@it.uu.se>
+ * Authors: Erik Nordstr�m, <erik.nordstrom@it.uu.se>
  *          
  *
  *****************************************************************************/
@@ -161,27 +161,27 @@ void NS_CLASS hello_send(void *arg)
 	    timer_set_timeout(&hello_timer,
 			      HELLO_INTERVAL - time_diff + jitter);
     }
-
-   if(g_lostDes->next!=NULL){
-        lostDes* temp = g_lostDes->next;
-	while(temp!=NULL)
-	{
-	    struct in_addr target;
-            target.s_addr = temp->d_addr;
-	   // rt_table_t* rev_rt = NULL;
-	   // rev_rt = rt_table_find(target);
-	    if(1)//timeval_diff(&now,&temp->last_send_time)>SEND_INTERVAL)
-	    {
-		// memcpy(&temp->last_send_time,&now,sizeof(struct timeval));
-           	 printf("=====find route to : %s.====\n ",ip_to_str(target));
-           	 rreq_route_discovery(target,0,NULL);
-	   	 temp = temp->next;
+//修改
+//    if(g_lostDes->next!=NULL){
+//         lostDes* temp = g_lostDes->next;
+// 	while(temp!=NULL)
+// 	{
+// 	    struct in_addr target;
+//             target.s_addr = temp->d_addr;
+// 	   // rt_table_t* rev_rt = NULL;
+// 	   // rev_rt = rt_table_find(target);
+// 	    if(1)//timeval_diff(&now,&temp->last_send_time)>SEND_INTERVAL)
+// 	    {
+// 		// memcpy(&temp->last_send_time,&now,sizeof(struct timeval));
+//            	 printf("=====find route to : %s.====\n ",ip_to_str(target));
+//            	 rreq_route_discovery(target,0,NULL);
+// 	   	 temp = temp->next;
 		 
-	    }else {
-		printf("no need to find route.\n ");break;
-		  }
-	}
-   }
+// 	    }else {
+// 		printf("no need to find route.\n ");break;
+// 		  }
+// 	}
+//    }
 
 /*
    if(g_lostDes->next!=NULL){
