@@ -1,0 +1,1 @@
+cmd_/home/nx06/aodv-uu-0.9.6/lnx/kaodv.ko := ld -EL -r  -T ./scripts/module-common.lds -T ./arch/arm64/kernel/module.lds --build-id  -o /home/nx06/aodv-uu-0.9.6/lnx/kaodv.ko /home/nx06/aodv-uu-0.9.6/lnx/kaodv.o /home/nx06/aodv-uu-0.9.6/lnx/kaodv.mod.o ;  true
